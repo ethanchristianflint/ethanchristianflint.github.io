@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if title %}{{ title }} | {% endif %}Ethan Christian Flint</title>
+  <meta name="description" content="{{ description or 'Ethan Christian Flint — digital accessibility, public sector and healthcare.' }}">
+  <link rel="stylesheet" href="/css/site.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header>
+    <p class="site-name"><a href="/">Ethan Christian Flint</a></p>
+  </header>
+  <main id="main" tabindex="-1">
+    {{ content | safe }}
+  </main>
+  <footer>
+    <p>&copy; 2026 Ethan Christian Flint</p>
+  </footer>
+</body>
+</html>
