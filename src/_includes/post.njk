@@ -1,0 +1,12 @@
+---
+layout: base.njk
+---
+<article>
+  <header class="page-head">
+    <p class="eyebrow">// {{ kind or "learning log" }} · <time datetime="{{ page.date | isoDate }}">{{ page.date | longDate }}</time></p>
+    <h1>{{ title }}</h1>
+  </header>
+  <div class="prose">
+    {{ content | safe }}
+  </div>
+</article>

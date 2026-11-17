@@ -3,20 +3,39 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% if title %}{{ title }} | {% endif %}Ethan Christian Flint</title>
-  <meta name="description" content="{{ description or 'Ethan Christian Flint — digital accessibility, public sector and healthcare.' }}">
+  <title>{% if title %}{{ title }} | {% endif %}{{ site.name }}</title>
+  <meta name="description" content="{{ description or 'Ethan Christian Flint: IT Support Center Analyst building toward digital accessibility for the public sector and healthcare.' }}">
+  <link rel="preload" href="/fonts/plex-sans-400.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/css/site.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
-  <header>
-    <p class="site-name"><a href="/">Ethan Christian Flint</a></p>
+  <header class="site-header">
+    <div class="wrap site-header__inner">
+      <a class="brand" href="/"{% if page.url == "/" %} aria-current="page"{% endif %}>
+        <span class="brand__mark" aria-hidden="true">{{ site.initials }}</span>
+        {{ site.name }}
+      </a>
+      <nav aria-label="Main">
+        <ul class="nav">
+          {%- for item in site.nav %}
+          <li><a href="{{ item.url }}"{% if page.url.startsWith(item.url) %} aria-current="page"{% endif %}>{{ item.label }}</a></li>
+          {%- endfor %}
+        </ul>
+      </nav>
+    </div>
   </header>
-  <main id="main" tabindex="-1">
+  <main id="main" tabindex="-1" class="wrap">
     {{ content | safe }}
   </main>
-  <footer>
-    <p>&copy; 2026 Ethan Christian Flint</p>
+  <footer class="site-footer">
+    <div class="wrap site-footer__inner">
+      <p>{{ site.name }} · {{ site.location }}</p>
+      <ul class="footer-links">
+        <li><a href="{{ site.linkedin }}">LinkedIn</a></li>
+        <li><a href="/accessibility/">Accessibility statement</a></li>
+      </ul>
+    </div>
   </footer>
 </body>
 </html>

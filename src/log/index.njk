@@ -1,0 +1,17 @@
+---
+layout: base.njk
+title: Learning log
+description: Short write-ups on what I'm learning about digital accessibility testing.
+---
+<header class="page-head">
+  <h1>Learning log</h1>
+  <p class="lede">Short write-ups as I work through accessibility training and certifications.</p>
+</header>
+<ul class="entries prose-gap">
+  {%- for entry in collections.log %}
+  <li>
+    <time datetime="{{ entry.date | isoDate }}">{{ entry.date | isoDate }}</time>
+    <a href="{{ entry.url }}">{{ entry.data.title }}</a>
+  </li>
+  {%- endfor %}
+</ul>

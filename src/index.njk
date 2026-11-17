@@ -1,0 +1,69 @@
+---
+layout: base.njk
+---
+<section class="hero" aria-labelledby="hero-h">
+  <div>
+    <p class="eyebrow">// digital accessibility · public sector &amp; healthcare</p>
+    <h1 id="hero-h">Find the barriers. Document them. Fix them.</h1>
+    <p class="lede">I'm Ethan Christian Flint, a Tier 1 IT Support Center Analyst at the Arizona Supreme Court, building toward digital accessibility work: testing websites and documents against WCAG so people with disabilities can use them. DHS Trusted Tester certification in progress.</p>
+    <div class="actions">
+      <a class="button button--primary" href="/accessibility/">Read the accessibility statement</a>
+      <a class="button button--secondary" href="{{ site.linkedin }}">Connect on LinkedIn</a>
+    </div>
+  </div>
+  <aside class="panel" aria-labelledby="conf-h">
+    <h2 id="conf-h">conformance: this site</h2>
+    <dl class="facts">
+      <div><dt>Standard</dt><dd>WCAG 2.2 AA</dd></div>
+      <div><dt>Text contrast</dt><dd>AAA (7:1 or higher)</dd></div>
+      <div><dt>First full audit</dt><dd>In progress</dd></div>
+      <div><dt>Known issues</dt><dd>Published with the audit</dd></div>
+    </dl>
+  </aside>
+</section>
+
+<section class="section" aria-labelledby="path-h">
+  <h2 id="path-h">Progression</h2>
+  <ol class="steps">
+    <li class="step step--active">
+      <p class="step__status">01 · IN PROGRESS</p>
+      <h3>DHS Trusted Tester for Web</h3>
+      <p>Started November 2026. Exam target: January 2027.</p>
+    </li>
+    <li class="step">
+      <p class="step__status">02 · PLANNED</p>
+      <h3>Authoring Section 508 Compliant Documents</h3>
+      <p>Target: March 2027</p>
+    </li>
+    <li class="step">
+      <p class="step__status">03 · PLANNED</p>
+      <h3>IAAP CPACC</h3>
+      <p>Target: October 2027</p>
+    </li>
+    <li class="step">
+      <p class="step__status">04 · PREREQUISITES</p>
+      <h3>WGU B.S. Business Administration – IT Management</h3>
+      <p>Completing prerequisites; enrolling in 2027</p>
+    </li>
+    <li class="step step--civic">
+      <p class="step__status">CIVIC · EXPLORING</p>
+      <h3>Chandler boards &amp; commissions</h3>
+      <p>Volunteer city board service, with a focus on accessible local government</p>
+    </li>
+  </ol>
+</section>
+
+<section class="section" aria-labelledby="log-h">
+  <div class="section__head">
+    <h2 id="log-h">Learning log</h2>
+    <a href="/log/">All learning log entries</a>
+  </div>
+  <ul class="entries">
+    {%- for entry in collections.log | head(3) %}
+    <li>
+      <time datetime="{{ entry.date | isoDate }}">{{ entry.date | isoDate }}</time>
+      <a href="{{ entry.url }}">{{ entry.data.title }}</a>
+    </li>
+    {%- endfor %}
+  </ul>
+</section>

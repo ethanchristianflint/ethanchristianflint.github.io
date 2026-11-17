@@ -1,0 +1,21 @@
+---
+layout: base.njk
+title: Articles
+description: Writing on digital accessibility and AI for local government.
+---
+<header class="page-head">
+  <h1>Articles</h1>
+  <p class="lede">Writing on digital accessibility and AI for local government.</p>
+</header>
+{%- if collections.articles.length %}
+<ul class="entries">
+  {%- for a in collections.articles %}
+  <li>
+    <time datetime="{{ a.date | isoDate }}">{{ a.date | isoDate }}</time>
+    <a href="{{ a.url }}">{{ a.data.title }}</a>
+  </li>
+  {%- endfor %}
+</ul>
+{%- else %}
+<p class="prose">The first article is in progress. In the meantime, the <a href="/log/">learning log</a> has shorter updates.</p>
+{%- endif %}
