@@ -5,7 +5,7 @@ description: Accessibility statement and conformance status for ethanchristianfl
 permalink: /accessibility/
 ---
 <header class="page-head">
-  <p class="eyebrow">// accessibility statement</p>
+  <p class="eyebrow"><span aria-hidden="true">// </span>accessibility statement</p>
   <h1>Accessibility statement</h1>
   <p class="lede">This site is the first thing I audit. Here's what it aims for, how it's tested and what's known to be wrong.</p>
 </header>

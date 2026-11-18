@@ -5,7 +5,7 @@ description: Resume of Ethan Christian Flint, Tier 1 IT Support Center Analyst b
 permalink: /resume/
 ---
 <header class="page-head">
-  <p class="eyebrow">// resume</p>
+  <p class="eyebrow"><span aria-hidden="true">// </span>resume</p>
   <h1>Ethan Christian Flint</h1>
   <p class="lede">Tier 1 IT Support Center Analyst building toward digital accessibility (DHS Trusted Tester in progress). Chandler, Arizona.</p>
 </header>
