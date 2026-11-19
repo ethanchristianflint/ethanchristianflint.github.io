@@ -124,6 +124,10 @@ p { margin: 0 0 1rem; max-width: 65ch; }
 .site-footer { background: var(--ink); color: var(--on-ink); margin-top: 2rem; }
 .site-footer__inner { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem; padding-block: 2.5rem 3.5rem; }
 .site-footer p { margin: 0; }
+.site-footer__about { display: grid; gap: 0.5rem; max-width: 60ch; }
+.site-footer .disclaimer { font-size: 0.9375rem; }
+.post-disclaimer { margin-top: 2.5rem; padding-top: 1rem; border-top: 1px solid currentColor; font-size: 0.9375rem; max-width: 70ch; }
+.post-disclaimer p { margin: 0; }
 .site-footer a { color: var(--on-ink-link); }
 .site-footer a:focus-visible { outline-color: var(--on-ink-link); }
 .footer-links { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; }
